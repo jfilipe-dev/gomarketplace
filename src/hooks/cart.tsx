@@ -53,12 +53,11 @@ const CartProvider: React.FC = ({ children }) => {
 
   const addToCart = useCallback(
     async product => {
-      console.log(product.quantity);
       const hasProduct = products.find(p => p.id === product.id);
+      const newProducts = products.filter(p => p.id !== product.id);
       if (hasProduct) {
-        const newProducts = products.filter(p => p.id !== product.id);
-        product.quantity = Number(product.quantity) + 1;
-        setProducts([...newProducts, Object(product)]);
+        hasProduct.quantity += 1;
+        setProducts([...newProducts, hasProduct]);
       } else {
         product.quantity = 1;
         setProducts([...products, product]);
@@ -79,15 +78,17 @@ const CartProvider: React.FC = ({ children }) => {
 
   const decrement = useCallback(
     async id => {
-      const product = products.find(p => p.id === id);
-      const newProducts = products.filter(p => p.id !== id);
-      product.quantity -= 1;
+      const productIndex = products.findIndex(item => item.id === id);
 
-      if (product.quantity < 1) {
-        setProducts([...newProducts]);
-      } else {
-        setProducts([...newProducts, Object(product)]);
+      const newProducts: Product[] = products;
+
+      newProducts[productIndex].quantity -= 1;
+
+      if (newProducts[productIndex].quantity < 1) {
+        newProducts.splice(productIndex, 1);
       }
+
+      setProducts([...newProducts]);
     },
     [products],
   );
