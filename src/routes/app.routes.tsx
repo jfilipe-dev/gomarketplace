@@ -24,7 +24,7 @@ const AppRoutes: React.FC = () => (
       options={{
         headerShown: true,
         headerTransparent: true,
-        headerTitle: () => <Image source={Logo} />,
+        headerTitle: () => <Image source={Logo} style={{ left: 101 }} />,
       }}
       name="Dashboard"
       component={Dashboard}
@@ -32,10 +32,10 @@ const AppRoutes: React.FC = () => (
     <App.Screen
       options={{
         headerTransparent: true,
-        headerTitle: () => <Image source={Logo} />,
+        headerTitle: () => <Image source={Logo} style={{ left: 45 }} />,
         headerBackTitleVisible: false,
         headerLeftContainerStyle: {
-          marginLeft: 20,
+          marginLeft: 0,
         },
 
         headerBackImage: () => <FeatherIcon name="chevron-left" size={24} />,

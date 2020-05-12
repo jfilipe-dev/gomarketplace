@@ -38,24 +38,34 @@ interface Product {
 const Cart: React.FC = () => {
   const { increment, decrement, products } = useCart();
 
-  function handleIncrement(id: string): void {
-    // TODO
-  }
-
-  function handleDecrement(id: string): void {
-    // TODO
-  }
-
   const cartTotal = useMemo(() => {
-    // TODO RETURN THE SUM OF THE QUANTITY OF THE PRODUCTS IN THE CART
+    const cart = products.reduce(
+      (accumualtor, product) => {
+        accumualtor.total += Number(product.price) * Number(product.quantity);
 
-    return formatValue(0);
+        return accumualtor;
+      },
+      {
+        total: 0,
+      },
+    );
+
+    return formatValue(cart.total);
   }, [products]);
 
   const totalItensInCart = useMemo(() => {
-    // TODO RETURN THE SUM OF THE QUANTITY OF THE PRODUCTS IN THE CART
+    const cart = products.reduce(
+      (accumualtor, product) => {
+        accumualtor.itens += Number(product.quantity);
 
-    return 0;
+        return accumualtor;
+      },
+      {
+        itens: 0,
+      },
+    );
+
+    return cart.itens;
   }, [products]);
 
   return (
@@ -90,13 +100,13 @@ const Cart: React.FC = () => {
               <ActionContainer>
                 <ActionButton
                   testID={`increment-${item.id}`}
-                  onPress={() => handleIncrement(item.id)}
+                  onPress={() => increment(item.id)}
                 >
                   <FeatherIcon name="plus" color="#E83F5B" size={16} />
                 </ActionButton>
                 <ActionButton
                   testID={`decrement-${item.id}`}
-                  onPress={() => handleDecrement(item.id)}
+                  onPress={() => decrement(item.id)}
                 >
                   <FeatherIcon name="minus" color="#E83F5B" size={16} />
                 </ActionButton>
@@ -107,7 +117,9 @@ const Cart: React.FC = () => {
       </ProductContainer>
       <TotalProductsContainer>
         <FeatherIcon name="shopping-cart" color="#fff" size={24} />
-        <TotalProductsText>{`${totalItensInCart} itens`}</TotalProductsText>
+        <TotalProductsText>
+          {`${String(totalItensInCart)} itens`}
+        </TotalProductsText>
         <SubtotalValue>{cartTotal}</SubtotalValue>
       </TotalProductsContainer>
     </Container>
