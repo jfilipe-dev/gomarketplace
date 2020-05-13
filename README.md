@@ -14,8 +14,12 @@
 
 ### 💻 Features
 - List products
-- Add products
-- Upload CSV files to add transactions
+- Add products in cart
+- Increment the quantity of a product
+- Decrement the quantity of a product
+- Calculates total cart items
+- Calculates total value of the products
+- Save cart items to memory
 
 ### 💾 How to install
 1. Clone this repository - 
