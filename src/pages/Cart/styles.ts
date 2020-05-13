@@ -18,7 +18,7 @@ export const ProductList = styled(FlatList)`
 `;
 
 export const Product = styled.View`
-  background: #fff;
+  background: #f6f6f6;
   padding: 15px 10px;
   border-radius: 5px;
   margin: 5px;
@@ -34,6 +34,7 @@ export const ProductImage = styled.Image`
 export const ProductTitleContainer = styled.View`
   font-size: 16px;
   margin-left: 5px;
+  width: 190px;
 `;
 
 export const ProductTitle = styled.Text`
@@ -75,7 +76,8 @@ export const ProductQuantity = styled.Text`
 export const ActionContainer = styled.View`
   align-self: flex-end;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  height: 100%;
 
   margin-left: auto;
 `;
@@ -93,6 +95,9 @@ export const TotalProductsContainer = styled.View`
 
   flex-direction: row;
   background: #e83f5b;
+
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 
   padding: 20px 40px;
   justify-content: space-between;

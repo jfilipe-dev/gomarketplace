@@ -16,7 +16,7 @@ const AppRoutes: React.FC = () => (
   <App.Navigator
     screenOptions={{
       headerShown: true,
-      cardStyle: { backgroundColor: '#EBEEF8' },
+      cardStyle: { backgroundColor: '#fff' },
     }}
     initialRouteName="Dashboard"
   >
@@ -24,7 +24,8 @@ const AppRoutes: React.FC = () => (
       options={{
         headerShown: true,
         headerTransparent: true,
-        headerTitle: () => <Image source={Logo} style={{ left: 101 }} />,
+        headerTitleAlign: 'center',
+        headerTitle: () => <Image source={Logo} />,
       }}
       name="Dashboard"
       component={Dashboard}
@@ -32,7 +33,8 @@ const AppRoutes: React.FC = () => (
     <App.Screen
       options={{
         headerTransparent: true,
-        headerTitle: () => <Image source={Logo} style={{ left: 45 }} />,
+        headerTitleAlign: 'center',
+        headerTitle: () => <Image source={Logo} />,
         headerBackTitleVisible: false,
         headerLeftContainerStyle: {
           marginLeft: 0,

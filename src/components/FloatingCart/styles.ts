@@ -3,6 +3,8 @@ import styled from 'styled-components/native';
 export const Container = styled.View`
   position: absolute;
   bottom: 0px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 
   flex-direction: row;
   background: #e83f5b;

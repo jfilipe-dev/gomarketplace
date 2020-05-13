@@ -1,28 +1,40 @@
 {
   "products": [
     {
-      "id": "123",
-      "title": "Nome do produto 01",
-      "image_url": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/camiseta-ecommerce.jpg",
-      "price": 50
+      "id": 1,
+      "title": "AIR MAX 90 - DUCK CAMO",
+      "price": 699.99,
+      "image_url": "https://images.lojanike.com.br/1024x1024/produto/209138_2015460_20200317154302.jpg"
     },
     {
-      "id": "1234",
-      "title": "Nome do produto 02",
-      "image_url": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/camiseta-ecommerce.jpg",
-      "price": 60
+      "id": 2,
+      "title": "AIR JORDAN I - PINE GREEN",
+      "price": 749.99,
+      "image_url": "https://images.lojanike.com.br/1024x1024/produto/193017_1989014_20200226104403.jpg"
     },
     {
-      "id": "12345",
-      "title": "Nome do produto 03",
-      "image_url": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/camiseta-ecommerce.jpg",
-      "price": 70
+      "id": 3,
+      "title": "AIR JORDAN IV BLACK - CAT",
+      "price": 899.99,
+      "image_url": "https://images.lojanike.com.br/515x515/produto/193104_1931620_20200121135317.jpg"
     },
     {
-      "id": "123456",
-      "title": "Nome do produto 04",
-      "image_url": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/camiseta-ecommerce.jpg",
-      "price": 80
+      "id": 5,
+      "title": "DUNK LOW PLUM",
+      "price": 499.99,
+      "image_url": "https://images.lojanike.com.br/1024x1024/produto/208843_1935345_20200128112255.jpg"
+    },
+    {
+      "id": 6,
+      "title": "AIR MAX 720 UNDERCOVER - UNIVERSITY RED/BLUE JAY",
+      "price": 999.99,
+      "image_url": "https://images.lojanike.com.br/1024x1024/produto/189968_1841912_20191125095331.jpg"
+    },
+    {
+      "id": 4,
+      "title": "SB DUNK LOW - SUPREME",
+      "price": 499.99,
+      "image_url": "https://images.lojanike.com.br/1024x1024/produto/179179_1688597_20190913170437.png"
     }
   ]
 }

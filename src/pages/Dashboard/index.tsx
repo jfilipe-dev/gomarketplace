@@ -43,10 +43,6 @@ const Dashboard: React.FC = () => {
     loadProducts();
   }, []);
 
-  function handleAddToCart(item: Product): void {
-    // TODO
-  }
-
   return (
     <Container>
       <ProductContainer>
@@ -67,7 +63,7 @@ const Dashboard: React.FC = () => {
                   testID={`add-to-cart-${item.id}`}
                   onPress={() => addToCart(item)}
                 >
-                  <FeatherIcon size={20} name="plus" color="#C4C4C4" />
+                  <FeatherIcon size={20} name="plus" color="#a0a0b3" />
                 </ProductButton>
               </PriceContainer>
             </Product>

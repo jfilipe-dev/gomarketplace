@@ -21,7 +21,7 @@ export const ProductList = styled(FlatList).attrs({
 `;
 
 export const Product = styled.View`
-  background: #fff;
+  background: #f6f6f6;
   padding: 16px 16px;
   border-radius: 5px;
   margin: 8px;
