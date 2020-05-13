@@ -11,6 +11,7 @@
 - React navigation
 - Styled components
 - Json server
+- Async storage
 
 ### 💻 Features
 - List products
