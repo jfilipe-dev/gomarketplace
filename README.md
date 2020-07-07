@@ -2,7 +2,7 @@
 #### A mobile cart application.
 
 ### 📺 Preview
-![preview-gomarketpalce](https://user-images.githubusercontent.com/55659197/81866712-f857b100-9545-11ea-9a6b-3a1f04551eeb.gif)
+<img src="https://user-images.githubusercontent.com/55659197/81866712-f857b100-9545-11ea-9a6b-3a1f04551eeb.gif" width="280">
 
 
 ### 👨🏻‍💻 Stack and extensions
